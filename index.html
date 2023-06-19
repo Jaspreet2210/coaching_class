@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coaching Class Website</title>
+</head>
+<body>
+  <h1>Welcome to the Coaching Class Website</h1>
+
+  <h2>User Registration</h2>
+  <form id="registrationForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+
+    <input type="submit" value="Register">
+  </form>
+
+  <h2>Course Enrollment</h2>
+  <form id="enrollmentForm">
+    <label for="course">Select a Course:</label>
+    <select id="course" name="course">
+      <option value="math">Math</option>
+      <option value="science">Science</option>
+      <option value="english">English</option>
+    </select><br>
+
+    <input type="submit" value="Enroll">
+  </form>
+
+  <h2>Course Management</h2>
+  <table id="courseTable">
+    <tr>
+      <th>Course</th>
+      <th>Enrolled Students</th>
+    </tr>
+    <tr>
+      <td>Math</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>Science</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>English</td>
+      <td>12</td>
+    </tr>
+  </table>
+
+  <script>
+    // User registration form submission
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Perform user registration logic here
+
+      // Reset the form
+      document.getElementById('registrationForm').reset();
+    });
+
+    // Course enrollment form submission
+    document.getElementById('enrollmentForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const selectedCourse = document.getElementById('course').value;
+
+      // Perform course enrollment logic here
+
+      // Reset the form
+      document.getElementById('enrollmentForm').reset();
+    });
+  </script>
+</body>
+</html>
